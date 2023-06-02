@@ -20,7 +20,8 @@ const Demo = () => {
         <form 
           className="relative flex justify-center items-center" 
           action="" 
-          onSubmit={handleSubmit}>
+          onSubmit={handleSubmit}
+        >
           <img 
             src={linkIcon} 
             alt="link_icon" 
