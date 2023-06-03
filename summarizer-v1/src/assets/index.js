@@ -7,6 +7,7 @@ import logi from './logi.svg'
 import loga from './loga.svg'
 import loge from './loge.svg'
 import logu from './logu.svg'
+import loguu from './loguu.svg'
 
 export {
     linkIcon,
@@ -17,5 +18,6 @@ export {
     logi,
     loga,
     loge,
-    logu
+    logu,
+    loguu
 }

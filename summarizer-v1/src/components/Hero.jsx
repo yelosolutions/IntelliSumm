@@ -1,10 +1,10 @@
-import { logu } from '../assets'
+import { loguu } from '../assets'
 
 const Hero = () => {
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        <img src={logu} alt="intellisumm logo" className='w-32 object-contain'/>
+        <img src={loguu} alt="intellisumm logo" className='w-32 object-contain'/>
       <button type='button' onClick={() => window.open('https://github.com/yelosolutions')} className='black_btn'>Github</button>
       </nav>
       <h1 className='head_text' >The Article Summarizer. 
