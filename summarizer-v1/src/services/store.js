@@ -11,13 +11,14 @@ export const store = configureStore({
 });
 
 
-/*Analogy: If Global Store is a whole cake, then a 'reducer' allows me 
+/*Analogy: If Global Store is a whole cake, then a 'reducer' allows 
 to get a specific piece of that cake.
-- reducer - Reduces entire state to only grab what I need.
+- reducer - Reduces entire state to only grab what is needed.
 - middleware - Allows me to do something with a state before getting it
 
-What I pass inside the getDefaultMiddleware().concat() will make 
-reducer work - that is 'articleApi.middleware'
+Pass 'articleApi.middleware' inside the getDefaultMiddleware().concat() to make 
+reducer work
+
     WHAT HAPPENNED
  * Configuring a store
  * A store is a global state that stores entire info 

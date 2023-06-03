@@ -1,17 +1,50 @@
 import { useState, useEffect } from 'react'
 
 import { copy, linkIcon, loader, tick } from '../assets';
+import { useLazyGetSummaryQuery } from '../services/article';
 
 const Demo = () => {
   //use useState hook to create and manipulate state values
   const [article, setArticle] = useState({
     url: "",
     summary:""
-  })
+  });
 
+  const [allArticles, setAllArticles] = useState([]);
+
+  //useLazyGetSummaryQuery hook
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem('articles')
+    );
+
+    //add articles to state if there are any articles in local storage
+    if(articlesFromLocalStorage){
+      setAllArticles(articlesFromLocalStorage);
+    }
+  }, [])
+
+  
   const handleSubmit = async (e) => {
-    alert('Submited');
-  }
+    e.preventDefault();
+    const { data } = await getSummary({ articleUrl: article.url });
+
+    if(data?.summary){
+      const newArticle = {...article, summary: data.summary};
+
+      //pushing newArticle to this array
+      const updatedAllArticles = [newArticle, ...allArticles];
+
+      setArticle(newArticle);
+      setAllArticles(updatedAllArticles);
+
+      //localStorage can only contain strings
+      localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
+    }
+  };
 
   return (
     <section className="mt-16 w-full max-w-xl"
@@ -43,7 +76,11 @@ const Demo = () => {
             ↵
           </button>
         </form>
+        {/* Browse URL history */}
+
       </div>
+
+      {/* Display Results*/}
     </section>
   )
 }
