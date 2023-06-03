@@ -1,6 +1,6 @@
 import Hero from './components/Hero'
 import Demos from './components/Demos'
-//import Demo from './components/Demo'
+// import Demo from './components/Demo'
 import "./App.css";
 
 const App = () => {
