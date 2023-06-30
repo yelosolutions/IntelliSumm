@@ -11,7 +11,9 @@ const Hero = () => {
       <br className='max-md:hidden'/>
       <span className='orange_gradient'>Enabled by OpenAI's GPT-4</span>
       </h1>
-      <h2 className='desc'> Enhance your productivity with IntelliSumm, an article summarizer that transform long articles into clear and coincise summaries.</h2>
+      <h2 className='desc'> Enhance your productivity with IntelliSumm, an article summarizer that transform long articles into clear and coincise summaries.
+      Simply add a url of the website with the article to summarize in the input below. Easy!
+      </h2>
     </header>
   )
 }

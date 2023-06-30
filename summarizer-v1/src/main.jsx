@@ -9,7 +9,7 @@ import { store } from './services/store'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Wrap entire application in Provider
+    {/* Wrap entire application in Provider,
     Provider will service the app with Store(Global state)*/}
     <Provider store={store}>
       <App />
