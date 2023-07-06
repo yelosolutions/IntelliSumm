@@ -1,3 +1,4 @@
+//this is one specific part of a state of a Global Store.
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 

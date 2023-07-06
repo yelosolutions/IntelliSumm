@@ -20,7 +20,7 @@ Pass 'articleApi.middleware' inside the getDefaultMiddleware().concat() to make
 reducer work
 
     WHAT HAPPENNED
- * Configuring a store
+ * Configuring a store(after updating the main.jsx file)
  * A store is a global state that stores entire info 
     about the app (not needed mostly)
  * Reduce it to a piece(articleApi) using reducer
